@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World!</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div id="cursor">
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Shabana's Cosmetics</a>
+
+    <ul class="nav-links">
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Stories</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <button class="nav-cart" onclick="toggleCart()">
+      <span>Cart</span>
+      <div class="cart-count" id="cartCount">0</div>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-tag">New Collection · Spring 2025</div>
+      <h1 class="hero-h1">Shabana's Cosmetics<br><em> Waxing</em><br>Solution</h1>
+      <p class="hero-sub">Easy-to-use waxing products by Shabana's Cosmetics for a flawless finish.
+        Experience comfort, care, and long-lasting smoothness.</p>
+      <div class="hero-ctas">
+        <a href="#featured" class="btn-primary"><span>Explore Now</span></a>
+        <a href="#categories" class="btn-ghost">Browse Collections <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <!-- <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Hero"> -->
+        <img src="./heroimage.jpeg" alt="">
+        <div class="hero-img-overlay"></div>
+      </div>
+      <div class="hero-badge">Shabana's<br>Beauty</div>
+    </div>
+    <!-- <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      SCROLL
+    </div> -->
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-band">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item">Smooth Skin Guarantee</div>
+      <div class="marquee-item">Gentle On Skin</div>
+      <div class="marquee-item">Long-Lasting Results</div>
+      <div class="marquee-item">Salon-Like Finish</div>
+      <div class="marquee-item">Easy At-Home Waxing</div>
+      <div class="marquee-item">Safe & Effective</div>
+      <div class="marquee-item">Smoothness You Can Feel</div>
+      <div class="marquee-item">Quick Hair Removal</div>
+      <div class="marquee-item">Soft Touch Finish</div>
+      <div class="marquee-item">Skin-Friendly Formula</div>
+      <div class="marquee-item">Smooth Results Every Time</div>
+      <div class="marquee-item">Premium by Shabana's Cosmetics</div>
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <section id="featured">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Curated Selection</div>
+        <h2 class="section-title">Featured <em>Collection</em></h2>
+      </div>
+      <a href="#" class="view-all">All Products <span class="arr">→</span></a>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Explore</div>
+        <h2 class="section-title">Shop by <em>Collection</em></h2>
+      </div>
+      <a href="#" class="view-all" style="color:rgba(245,240,232,.3)">All Collections <span class="arr">→</span></a>
+    </div>
+    <div class="categories-grid">
+      <div class="cat-card reveal">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="Living">
+        <!-- <img src="./cardimg.jpeg" alt=""> -->
+        <div class="cat-overlay"></div>
+        <div class="cat-line"></div>
+        <div class="cat-content">
+          <div class="cat-name">Living<br>&amp; Lounge</div>
+          <div class="cat-count">48 Objects</div>
+          <a href="#" class="cat-btn">Shop Now →</a>
+        </div>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:.1s">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80" alt="Kitchen">
+        <div class="cat-overlay"></div>
+        <div class="cat-line"></div>
+        <div class="cat-content">
+          <div class="cat-name">Kitchen<br>&amp; Table</div>
+          <div class="cat-count">36 Objects</div>
+          <a href="#" class="cat-btn">Shop Now →</a>
+        </div>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:.2s">
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80" alt="Bedroom">
+        <div class="cat-overlay"></div>
+        <div class="cat-line"></div>
+        <div class="cat-content">
+          <div class="cat-name">Bedroom<br>&amp; Rest</div>
+          <div class="cat-count">29 Objects</div>
+          <a href="#" class="cat-btn">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER BANNER -->
+  <section id="offer" class="reveal">
+    <div class="offer-left">
+      <h2 class="offer-headline">
+        Seasonal<br>
+        <strong>Sale Event</strong>
+      </h2>
+    </div>
+    <div class="offer-right">
+      <div class="offer-countdown">
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cdHours">08</span>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cdMins">47</span>
+          <div class="countdown-label">Mins</div>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cdSecs">32</span>
+          <div class="countdown-label">Secs</div>
+        </div>
+      </div>
+      <a href="#featured" class="btn-dark"><span>Shop the Sale — Up to 40% off</span></a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Voice of Collectors</div>
+        <h2 class="section-title">What people <em>say</em></h2>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Every piece I've purchased from ŌBJECT has become the defining object in its room. The
+          curation is flawless — they understand that great design outlives trends.</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://i.pravatar.cc/80?img=47" alt="">
+          <div>
+            <div class="testi-name">Marlène Dufresne</div>
+            <div class="testi-role">Interior Designer, Paris</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card" style="transition-delay:.12s">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I bought the brass vessel on a whim. Six months later it's the first thing guests ask
+          about. That's the mark of an object that truly earns its place.</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://i.pravatar.cc/80?img=12" alt="">
+          <div>
+            <div class="testi-name">James Okafor</div>
+            <div class="testi-role">Architect, Lagos</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card" style="transition-delay:.24s">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">The packaging alone is worth the price. But what's inside is even better — a level of
+          craft and materiality you rarely find outside a gallery.</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://i.pravatar.cc/80?img=32" alt="">
+          <div>
+            <div class="testi-name">Soo-Yeon Park</div>
+            <div class="testi-role">Collector, Seoul</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div>
+      <div class="nl-label">Join the Circle</div>
+      <h2 class="nl-title">Only the <em>finest</em><br>in your inbox</h2>
+      <p class="nl-sub">New arrivals, rare finds, and essays on living with beautiful things — delivered with restraint.
+      </p>
+    </div>
+    <div>
+      <div class="nl-form">
+        <div class="nl-input-wrap">
+          <input type="text" class="nl-input" placeholder="Your name">
+        </div>
+        <div class="nl-input-wrap">
+          <input type="email" class="nl-input" placeholder="your@email.com">
+        </div>
+        <button class="nl-submit" onclick="handleNewsletter(this)"><span>Subscribe — It's Free</span></button>
+        <div class="nl-perks">
+          <div class="nl-perk">
+            <div class="nl-perk-dot"></div>Early access to new collections
+          </div>
+          <div class="nl-perk">
+            <div class="nl-perk-dot"></div>Exclusive subscriber offers
+          </div>
+          <div class="nl-perk">
+            <div class="nl-perk-dot"></div>No spam, ever. Unsubscribe any time.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">ŌBJECT</span>
+        <p class="footer-desc">A curated shop for objects that earn their place — in your home, in your life, in your
+          memory.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">ig</a>
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">pt</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Living & Lounge</a></li>
+          <li><a href="#">Kitchen & Table</a></li>
+          <li><a href="#">Bedroom</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Curation Process</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Support</div>
+        <ul class="footer-links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Care Guides</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 ŌBJECT. All rights reserved.</div>
+      <div class="footer-pay">
+        <div class="pay-badge">VISA</div>
+        <div class="pay-badge">MC</div>
+        <div class="pay-badge">AMEX</div>
+        <div class="pay-badge">PAYPAL</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-head">
+      <div class="cart-title">Your Cart (<span id="drawerCount">0</span>)</div>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">Your cart is beautifully empty.</div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-subtotal">
+        <div class="cart-subtotal-label">Subtotal</div>
+        <div class="cart-subtotal-value" id="cartTotal">$0</div>
+      </div>
+      <div class="cart-shipping-note">Free shipping on orders over $150</div>
+      <button class="btn-checkout"><span>Proceed to Checkout →</span></button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ── PRODUCTS DATA ──
+    const products = [
+      {
+        id: 1,
+        name: 'Wabi Ceramic Carafe',
+        category: 'Kitchen',
+        price: 148,
+        oldPrice: 195,
+        tag: 'Sale',
+        stars: 5,
+        img: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80'
+      },
+      {
+        id: 2,
+        name: "Shabana's Wax",
+        category: 'Living',
+        price: 89,
+        stars: 5,
+        img: './cardimg.jpeg'
+      },
+      {
+        id: 3,
+        name: "Shabana's Wax",
+        category: 'Bedroom',
+        price: 220,
+        tag: 'New',
+        stars: 4,
+        img: './cardimg.jpeg'
+      },
+      {
+        id: 4,
+        name: "Shabana's Wax",
+        category: 'Objects',
+        price: 64,
+        stars: 5,
+        img: './cardimg.jpeg'
+      },
+      {
+        id: 5,
+        name: "Shabana's Wax",
+        category: 'Kitchen',
+        price: 112,
+        oldPrice: 140,
+        tag: 'Sale',
+        stars: 4,
+        img: './cardimg.jpeg'
+      }
+    ];
+
+    // ── CART STATE ──
+    let cart = [];
+
+    // ── RENDER PRODUCTS ──
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = products.map((p, i) => `
+    <div class="product-card reveal" style="transition-delay:${i * .08}s" data-id="${p.id}">
+      <div class="product-img-wrap">
+        <img class="product-img" src="${p.img}" alt="${p.name}" loading="lazy">
+        <div class="product-overlay"></div>
+        ${p.tag ? `<div class="product-tag">${p.tag}</div>` : ''}
+        <div class="product-actions">
+          <button class="btn-add" onclick="addToCart(${p.id})"><span>+ Add to Cart</span></button>
+          <button class="btn-wish" title="Wishlist">♡</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">${p.category}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-price-row">
+          <div class="product-price">$${p.price}</div>
+          ${p.oldPrice ? `<div class="product-price-old">$${p.oldPrice}</div>` : ''}
+        </div>
+        <div class="product-stars">${'★'.repeat(p.stars)}${'☆'.repeat(5 - p.stars)}</div>
+      </div>
+    </div>
+  `).join('');
+      observeReveal();
+    }
+
+    // ── ADD TO CART ──
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      const existing = cart.find(c => c.id === id);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+      updateCartUI();
+      showToast(`${product.name} added to cart`);
+    }
+
+    function updateCartUI() {
+      const total = cart.reduce((s, c) => s + c.qty, 0);
+      document.getElementById('cartCount').textContent = total;
+      document.getElementById('drawerCount').textContent = total;
+
+      const itemsEl = document.getElementById('cartItems');
+      const footerEl = document.getElementById('cartFooter');
+
+      if (cart.length === 0) {
+        itemsEl.innerHTML = '<div class="empty-cart">Your cart is beautifully empty.</div>';
+        footerEl.style.display = 'none';
+        return;
+      }
+
+      footerEl.style.display = 'block';
+      itemsEl.innerHTML = cart.map(c => `
+    <div class="cart-item">
+      <img class="cart-item-img" src="${c.img}" alt="${c.name}">
+      <div>
+        <div class="cart-item-cat">${c.category}</div>
+        <div class="cart-item-name">${c.name}</div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="changeQty(${c.id}, -1)">−</button>
+          <div class="qty-num">${c.qty}</div>
+          <button class="qty-btn" onclick="changeQty(${c.id}, 1)">+</button>
+        </div>
+      </div>
+      <div class="cart-item-price">$${c.price * c.qty}</div>
+    </div>
+  `).join('');
+
+      const subtotal = cart.reduce((s, c) => s + c.price * c.qty, 0);
+      document.getElementById('cartTotal').textContent = `$${subtotal}`;
+    }
+
+    function changeQty(id, delta) {
+      const item = cart.find(c => c.id === id);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) cart = cart.filter(c => c.id !== id);
+      updateCartUI();
+    }
+
+    function toggleCart() {
+      document.getElementById('cartOverlay').classList.toggle('open');
+      document.getElementById('cartDrawer').classList.toggle('open');
+      document.body.style.overflow = document.getElementById('cartDrawer').classList.contains('open') ? 'hidden' : '';
+    }
+
+    // ── TOAST ──
+    let toastTimer;
+    function showToast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 2800);
+    }
+
+    // ── NEWSLETTER ──
+    function handleNewsletter(btn) {
+      btn.querySelector('span').textContent = 'Subscribed! ✓';
+      btn.style.background = '#2a6644';
+      showToast('Welcome to the circle!');
+    }
+
+    // ── CURSOR ──
+    const cursor = document.getElementById('cursor');
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function animCursor() {
+      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+      rx += (mx - rx) * .12; ry += (my - ry) * .12;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(animCursor);
+    })();
+    document.querySelectorAll('a, button, .product-card, .cat-card, input').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+    });
+    // Also apply to dynamically generated elements
+    document.addEventListener('mouseenter', e => {
+      if (e.target.matches('a, button, .product-card, .cat-card, input')) document.body.classList.add('hovering');
+    }, true);
+    document.addEventListener('mouseleave', e => {
+      if (e.target.matches('a, button, .product-card, .cat-card, input')) document.body.classList.remove('hovering');
+    }, true);
+
+    // ── SCROLL EFFECTS ──
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── INTERSECTION OBSERVER ──
+    function observeReveal() {
+      document.querySelectorAll('.reveal, .testi-card').forEach(el => {
+        if (el._observed) return;
+        el._observed = true;
+        new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+            }
+          });
+        }, { threshold: .12 }).observe(el);
+      });
+    }
+
+    // ── COUNTDOWN ──
+    let endTime = Date.now() + (8 * 3600 + 47 * 60 + 32) * 1000;
+    function tickCountdown() {
+      const diff = Math.max(0, endTime - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cdMins').textContent = String(m).padStart(2, '0');
+      document.getElementById('cdSecs').textContent = String(s).padStart(2, '0');
+    }
+    setInterval(tickCountdown, 1000); tickCountdown();
+
+    // ── INIT ──
+    renderProducts();
+    observeReveal();
+  </script>
+</body>
+
+</html>
