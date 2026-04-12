@@ -558,6 +558,7 @@ section {
     overflow: hidden;
     cursor: none;
     group: true;
+    
 }
 
 .product-card:first-child {
@@ -1180,7 +1181,7 @@ footer {
     margin-bottom: 40px;
 }
 
-.footer-brand {}
+/* .footer-brand {} */
 
 .footer-logo {
     font-family: 'Syne', sans-serif;
